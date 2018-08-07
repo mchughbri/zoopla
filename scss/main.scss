@@ -1,0 +1,149 @@
+/* 
+    Author: Dan Jordan
+    Desc: Test for Zoolpa
+*/
+
+@import 'variables';
+@import 'mixins';
+
+/* General */
+html {
+    font-size: 62.5%;     
+}
+body {
+    font-family:$font-family;
+    font-size: 1.5rem;
+    color:$primary-color;
+    margin:0;
+    line-height:1.4;
+}
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:$font-family;
+    margin:0 0 1rem;
+    font-weight:normal;
+}
+address {
+    font-style: normal;
+}
+img {
+    max-width:100%;
+}
+p {
+    margin:0 0 1.2rem;
+}
+h1 {
+    font-size:2.5rem;
+}
+h2 {
+    font-size:2rem;
+}
+h3 {
+    font-size:1.75rem;
+}
+h4 {
+    font-size:1.5rem;
+}
+h5 {
+    font-size:1.25rem;
+}
+h6 {
+    font-size:1rem;
+}
+.subtle-header {
+    font-size:1.5rem;
+    margin-bottom:3.2rem;
+}
+
+.container {
+    padding:3.2rem;
+}
+.buttons {
+    padding:0.8rem 2rem;
+    &.primary {
+        background:$primary-button-bg;
+        border:1px solid $formborders;
+    }
+}
+input, select {
+    padding:0.8rem;
+    border:1px solid $formborders;
+}
+
+/* Search Form */
+.search-property {
+    &__field {
+        display:flex;
+    }
+    &__control {
+        @include flexbox();
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+    }
+    &__input {
+        width:100%;
+    }
+    &__action {
+        @include flexbox();
+        margin-left:1.2rem;
+    }
+}
+
+/* Search Results */
+.property-listings {
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+        li {
+            margin:0;
+            padding:0 0 6.4rem;
+        }
+    }
+    article {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-gap: 3.2rem;
+    }
+    &__property-image {
+        img {
+            width:100%;
+            display: block;
+            border:1px solid $formborders;
+        }
+    }
+    &__property-details {
+        h4 {
+            @include price;
+        }
+    }
+    &__agent-details {
+        address {
+            background: $address-bg;
+            padding:0.8rem;
+            p, img {
+                margin-bottom:0.4rem;
+                font-size:1.2rem;
+            }
+        }
+    }
+}
+
+/* Medium Styles */
+@media screen and (min-width: $medium-device-min) and (max-width:$medium-device-max) {
+    .container {
+        padding:2.4rem;
+    }
+    
+    .property-listings {
+        article {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-gap: 2.4rem;
+        }
+    }
+    
+}

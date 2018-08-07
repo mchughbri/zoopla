@@ -1,0 +1,131 @@
+/* 
+    Author: Dan Jordan
+    Desc: Test for Zoolpa
+*/
+/* Break Points */
+/* General */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #222222;
+  margin: 0;
+  line-height: 1.4; }
+
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  margin: 0 0 1rem;
+  font-weight: normal; }
+
+address {
+  font-style: normal; }
+
+img {
+  max-width: 100%; }
+
+p {
+  margin: 0 0 1.2rem; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+.subtle-header {
+  font-size: 1.5rem;
+  margin-bottom: 3.2rem; }
+
+.container {
+  padding: 3.2rem; }
+
+.buttons {
+  padding: 0.8rem 2rem; }
+  .buttons.primary {
+    background: #cccccc;
+    border: 1px solid #999999; }
+
+input, select {
+  padding: 0.8rem;
+  border: 1px solid #999999; }
+
+/* Search Form */
+.search-property__field {
+  display: flex; }
+
+.search-property__control {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%; }
+
+.search-property__input {
+  width: 100%; }
+
+.search-property__action {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 1.2rem; }
+
+/* Search Results */
+.property-listings ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .property-listings ul li {
+    margin: 0;
+    padding: 0 0 6.4rem; }
+
+.property-listings article {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-gap: 3.2rem; }
+
+.property-listings__property-image img {
+  width: 100%;
+  display: block;
+  border: 1px solid #999999; }
+
+.property-listings__property-details h4 {
+  color: red;
+  font-size: 2rem; }
+
+.property-listings__agent-details address {
+  background: #cccccc;
+  padding: 0.8rem; }
+  .property-listings__agent-details address p, .property-listings__agent-details address img {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem; }
+
+/* Medium Styles */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 2.4rem; }
+  .property-listings article {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 2.4rem; } }
