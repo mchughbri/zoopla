@@ -12,6 +12,16 @@ test('Results page is accessible', (t) => {
         });
 });
 
+test('Search page is accessible', (t) => {
+    request(app)
+        .get('/search')
+        .end((err, res) => {
+            t.same(res.status, 200);
+            t.error(err, 'no error');
+            t.end();
+        });
+});
+
 test('Return 404 for unsupported route', (t) => {
     request(app)
         .get('/unsupported')
