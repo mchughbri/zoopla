@@ -2,11 +2,12 @@
     <form action="/results" method="get" class="search-property" role="search">        
         <div class="search-property__field">
             <div class="search-property__control">
-                <input class="search-property__input" name="term" placeholder="Search Properties" type="text" aria-label="Search Properties">               
+                <input class="search-property__input" name="term" placeholder="Search Properties" type="text" aria-label="Search Properties" aria-required="true">               
             </div>
             <div class="search-property__action">
                 <button class="buttons primary">Search</button>
             </div>
         </div>
+        <div class="search-property__form-errors hidden" role="alert"></div>
     </form>
 </section>

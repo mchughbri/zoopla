@@ -66,6 +66,9 @@ input, select {
   padding: 0.8rem;
   border: 1px solid #999999; }
 
+.hidden {
+  display: none; }
+
 /* Search Form */
 .search-property__field {
   display: inline-grid;
@@ -75,6 +78,14 @@ input, select {
 
 .search-property__input {
   width: 100%; }
+
+.search-property__form-errors {
+  background: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+  padding: 0.8rem;
+  margin-top: 1.2rem;
+  border-radius: 0.4rem; }
 
 /* Search Results */
 .property-listings ul {
