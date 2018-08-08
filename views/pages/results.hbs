@@ -1,3 +1,8 @@
+{{#if data.noResults}}
+    <h2>No results found</h2>
+    <p>Enter another location and search again</p>
+    {{> searchform}}    
+{{else}}
 <h3 class="subtle-header">{{data.count}} result(s) found</h3>
 <section class="property-listings">
     <ul>
@@ -5,7 +10,7 @@
         <li>
             <article>
                 <div class="property-listings__property-image">
-                    <img src="{{this.image}}" alt="{{this.title}}" />
+                    <a href="{{this.url}}"><img src="{{this.image}}" alt="{{this.title}}" /></a>
                 </div>
                 <div class="property-listings__property-details">
                     <h3>{{this.title}}</h3>
@@ -25,4 +30,5 @@
         {{/each}}
     </ul>
 </section>
+{{/if}}
 

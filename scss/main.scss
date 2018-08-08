@@ -23,7 +23,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family:$font-family;
     margin:0 0 1rem;
-    font-weight:normal;
 }
 address {
     font-style: normal;
@@ -59,6 +58,7 @@ h6 {
 
 .container {
     padding:3.2rem;
+    min-width:320px;
 }
 .buttons {
     padding:0.8rem 2rem;
@@ -75,20 +75,13 @@ input, select {
 /* Search Form */
 .search-property {
     &__field {
-        display:flex;
-    }
-    &__control {
-        @include flexbox();
-        flex-wrap: wrap;
-        align-items: stretch;
-        width: 100%;
+        display:inline-grid;
+        grid-gap: 0.8rem;
+        grid-template-columns: 1fr auto;  
+        width:100%;
     }
     &__input {
         width:100%;
-    }
-    &__action {
-        @include flexbox();
-        margin-left:1.2rem;
     }
 }
 
@@ -126,23 +119,74 @@ input, select {
             padding:0.8rem;
             p, img {
                 margin-bottom:0.4rem;
-                font-size:1.2rem;
+                font-size:1.4rem;
             }
         }
     }
 }
 
-/* Medium Styles */
+/* Medium Device Styles */
 @media screen and (min-width: $medium-device-min) and (max-width:$medium-device-max) {
     .container {
         padding:2.4rem;
     }
-    
+    .subtle-header {
+        margin-bottom:2.4rem;
+    }
     .property-listings {
+        ul li {
+            padding-bottom:4.8rem;
+        }
         article {
             display: grid;
             grid-template-columns: 2fr 2fr;
             grid-gap: 2.4rem;
+        }        
+        &__agent-details {
+            grid-column: span 2;
+            background:$address-bg;
+            address {
+                display:inline-grid;
+                grid-gap: 2.4rem;
+                grid-template-columns: auto auto auto auto;   
+                align-items: center;             
+                img, p {                    
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+}
+/* Medium Device Styles */
+@media screen and (max-width:$small-device-max) {
+    .container {
+        padding:1.6rem;
+    }  
+    .subtle-header {
+        margin-bottom:1.6rem;
+    }
+    .property-listings {
+        ul li {
+            padding-bottom:3.2rem;
+        }
+        article {
+            display: block;
+        }  
+        &__property-image {
+            img {
+                width:auto;
+                margin-bottom:1.2rem;
+            }
+        }      
+        &__agent-details {            
+            address {
+                display:block;                
+                img, p {                    
+                    display: block;
+                }
+            }
         }
     }
     
